@@ -77,6 +77,43 @@ This project focuses on:
 
 ---
 
+## ⚙️ Week 2 – Data Preprocessing & Model Training
+
+### 🧹 Data Preprocessing Steps
+
+- Dropped irrelevant columns: `City`, `Date`, and `AQI_Bucket`
+- Replaced missing values using **median imputation** (robust against outliers)
+- Separated **features (X)** and **target (y = AQI)**
+- Scaled numerical features using **StandardScaler**
+- Split data into **training (80%)** and **testing (20%)** sets
+
+### 🧠 Model Training
+
+Trained two regression models:
+
+1. **Linear Regression** – baseline model
+2. **Random Forest Regressor** – ensemble model for non-linear relationships
+
+### 📈 Model Evaluation Results
+
+| Model                       | MAE ↓     | MSE ↓       | R² ↑     |
+| --------------------------- | --------- | ----------- | -------- |
+| Linear Regression           | 29.91     | 2965.68     | 0.81     |
+| **Random Forest Regressor** | **19.96** | **1842.74** | **0.88** |
+
+✅ **Best Model:** Random Forest Regressor  
+💾 **Saved as:** `air_quality_model.pkl`
+
+---
+
+### 🧾 Interpretation
+
+- Random Forest performed significantly better due to its ability to model non-linear patterns.
+- The model achieved **R² = 0.88**, indicating strong predictive accuracy.
+- AQI predictions are now ready for further tuning and visualization in **Week 3**.
+
+---
+
 ## ⚙️ Tech Stack
 
 - **Python 3.x**
